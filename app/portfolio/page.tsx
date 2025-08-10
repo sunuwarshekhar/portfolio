@@ -32,6 +32,7 @@ import kollectIcon from "../../public/kollect.png";
 import samsungIcon from "../../public/samsung.jpg";
 import iofundIcon from "../../public/iofund.png";
 import profileImg from "../../assets/profile.jpeg";
+import reactIcon from "../../public/react.svg";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +65,7 @@ export default function Portfolio() {
   };
 
   const skills = [
-    { name: "React/Next.js", icon: Code, color: "bg-blue-500" },
+    // { name: "React/Next.js", icon: reactIcon, color: "bg-white" },
     { name: "TypeScript", icon: Code, color: "bg-blue-600" },
     { name: "Node.js", icon: Server, color: "bg-green-600" },
     { name: "Express.js", icon: Server, color: "bg-gray-600" },
@@ -109,14 +110,14 @@ export default function Portfolio() {
     },
     {
       title: "IO-Fund",
-      link: "#",
+      link: "https://io-fund.com/",
       favicon: iofundIcon,
       fallbackIcon: TrendingUp,
       color: "bg-white",
     },
     {
       title: "KollectAI",
-      link: "#",
+      link: "https://www.kollectai.com/",
       favicon: kollectIcon,
       fallbackIcon: Activity,
       color: "bg-transparent",
@@ -213,13 +214,13 @@ export default function Portfolio() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={() => scrollToSection("projects")}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-200"
+              className="cursor-pointer px-8 py-3 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-200"
             >
               View Projects
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-3 border-2 border-blue-400 rounded-full font-semibold hover:bg-blue-400/10 transition-all duration-200"
+              className="cursor-pointer px-8 py-3 border-2 border-blue-400 rounded-full font-semibold hover:bg-blue-400/10 transition-all duration-200"
             >
               Get In Touch
             </button>
@@ -345,6 +346,24 @@ export default function Portfolio() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105">
+              <div className="text-center">
+                <div
+                  className={`w-16 h-16 bg-white mx-auto mb-4 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}
+                >
+                  <Image
+                    src={reactIcon}
+                    width={200}
+                    height={200}
+                    alt="reactJs"
+                    className="text-white"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg text-white group-hover:text-blue-300 transition-colors">
+                  ReactJs
+                </h3>
+              </div>
+            </div>
             {skills.map((skill, index) => {
               const Icon = skill.icon;
               return (
