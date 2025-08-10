@@ -284,13 +284,22 @@ export default function Portfolio() {
                 <div className="space-y-3">
                   <div>
                     <p className="text-white font-medium">
-                      Software Engineer - RPA Nepal
+                      Software Engineer -{" "}
+                      <a className="font-semibold" href="https://rpanp.com/">
+                        RPA Nepal
+                      </a>
                     </p>
                     <p className="text-sm text-gray-400">July 2025 – Present</p>
                   </div>
                   <div>
                     <p className="text-white font-medium">
-                      Software Engineer - Waft Tech
+                      Software Engineer -{" "}
+                      <a
+                        className="font-semibold"
+                        href="https://www.wafttech.com/"
+                      >
+                        Waft Tech
+                      </a>
                     </p>
                     <p className="text-sm text-gray-400">
                       May 2023 – July 2025
@@ -298,7 +307,13 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <p className="text-white font-medium">
-                      Software Engineer, Frontend - Hunchha Digital
+                      Software Engineer, Frontend -{" "}
+                      <a
+                        className="font-semibold"
+                        href="https://hunchhadigital.com/"
+                      >
+                        Hunchha Digital
+                      </a>
                     </p>
                     <p className="text-sm text-gray-400">
                       March 2022 – April 2023
