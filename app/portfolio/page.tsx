@@ -133,7 +133,11 @@ export default function Portfolio() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div
+            className={`${
+              isMenuOpen ? "hidden" : "flex"
+            }  justify-between items-center py-4`}
+          >
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
               Portfolio
             </div>
@@ -166,7 +170,7 @@ export default function Portfolio() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden  backdrop-blur-md rounded-lg mt-2 py-4">
+            <div className="md:hidden backdrop-blur-md rounded-lg mt-2 py-4">
               {["home", "about", "skills", "projects", "contact"].map(
                 (item) => (
                   <button
@@ -178,6 +182,12 @@ export default function Portfolio() {
                   </button>
                 )
               )}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden text-white hover:text-blue-400 transition-colors"
+              >
+                {isMenuOpen && <button className="px-4 py-2">Close</button>}
+              </button>
             </div>
           )}
         </div>
