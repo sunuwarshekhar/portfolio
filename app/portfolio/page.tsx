@@ -23,6 +23,7 @@ import {
   Stethoscope,
   TrendingUp,
   Activity,
+  Globe,
 } from "lucide-react";
 import Image from "next/image";
 import nepmedsIcon from "../../public/nepmed.png";
@@ -32,6 +33,7 @@ import kollectIcon from "../../public/kollect.png";
 import samsungIcon from "../../public/samsung.jpg";
 import iofundIcon from "../../public/iofund.png";
 import profileImg from "../../assets/profile.jpeg";
+import globalDiaryIcon from "../../public/global.png";
 import reactIcon from "../../public/react.svg";
 
 export default function Portfolio() {
@@ -80,6 +82,13 @@ export default function Portfolio() {
   ];
 
   const projects = [
+    {
+      title: "Global Diary",
+      link: "https://rpanp.com/",
+      favicon: globalDiaryIcon,
+      fallbackIcon: Globe,
+      color: "bg-gray-100",
+    },
     {
       title: "SamsungPlaza",
       link: "https://www.samsungplaza.com.np/",
@@ -296,10 +305,10 @@ export default function Portfolio() {
                     <p className="text-white font-medium">
                       Software Engineer -{" "}
                       <a className="font-semibold" href="https://rpanp.com/">
-                        RPA Nepal
+                        Global Diary
                       </a>
                     </p>
-                    <p className="text-sm text-gray-400">July 2025 – Present</p>
+                    <p className="text-sm text-gray-400">September 2025 – Present</p>
                   </div>
                   <div>
                     <p className="text-white font-medium">
@@ -482,11 +491,14 @@ export default function Portfolio() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors">
+            <a
+              href="mailto:forofficialshekhar@gmail.com"
+              className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors block"
+            >
               <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <p className="text-gray-400">forofficialshekhar@gmail.com</p>
-            </div>
+            </a>
             <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors">
               <div className="w-12 h-12 text-blue-400 mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl">📱</span>
@@ -494,11 +506,16 @@ export default function Portfolio() {
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-400">+977 9813815431</p>
             </div>
-            <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors">
+            <a
+              href="https://github.com/sunuwarshekhar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors block"
+            >
               <Github className="w-12 h-12 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">GitHub</h3>
               <p className="text-gray-400">github.com/sunuwarshekhar</p>
-            </div>
+            </a>
           </div>
 
           <a
